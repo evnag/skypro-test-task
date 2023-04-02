@@ -44,3 +44,25 @@ ALTER TABLE income
 
 ALTER TABLE outcome
     ADD CONSTRAINT outcome_socks_id FOREIGN KEY (socks_id) REFERENCES socks (id);
+
+-- changeSet evnag:3
+ALTER TABLE total
+DROP
+COLUMN date_total;
+ALTER TABLE total
+    ADD
+        COLUMN date_total TIMESTAMP NOT NULL;
+
+ALTER TABLE income
+DROP
+COLUMN date_income;
+ALTER TABLE income
+    ADD
+        COLUMN date_income TIMESTAMP NOT NULL;
+
+ALTER TABLE outcome
+DROP
+COLUMN date_outcome;
+ALTER TABLE outcome
+    ADD
+        COLUMN date_outcome TIMESTAMP NOT NULL;

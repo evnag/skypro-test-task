@@ -1,13 +1,13 @@
 package com.example.skyprotesttask.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -19,8 +19,9 @@ public class Income {
     @Column(name = "income_quantity")
     private Integer incomeQuantity;
     @Column(name = "date_income")
-    private Date date;
-    @ManyToOne
-    @JoinColumn(name="socks_id", nullable=false)
+    private LocalDateTime date;
+    @OneToOne
+    @JsonIgnore
+    @JoinColumn(name="socks_id")
     private Socks socks;
 }

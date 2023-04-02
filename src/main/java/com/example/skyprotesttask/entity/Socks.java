@@ -1,13 +1,11 @@
 package com.example.skyprotesttask.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.Set;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -24,8 +22,4 @@ public class Socks {
     @OneToOne(mappedBy = "socks", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
     private Total total;
-    @OneToMany(mappedBy = "socks")
-    private Set<Income> incomes;
-    @OneToMany(mappedBy = "socks")
-    private Set<Outcome> outcomes;
 }
