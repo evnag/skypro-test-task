@@ -4,12 +4,15 @@ This Java Spring test project is dedicated to creating a server application for 
 
 The external interface of the application is presented by Swagger and is available at http://localhost:8080/swagger-ui/index.html#
 
-The application is based on the Spring(Boot) Framework;
-PostgreSQL is used to store system data. Database schema:
-Liquibase is used for versioning the database schema
+The application is based on the Spring(Boot) Framework.
+PostgreSQL is used to store system data.
+Liquibase is used for versioning the database schema.
+Database schema: https://github.com/evnag/skypro-test-task/wiki
 
 The storekeeper has the ability to:
 - take into account the incomes and outcomes of socks;
+- get a list of all incomes and outcomes;
+- get a list of all incomes and outcomes on a specific date;
 - find out the total number of socks of a certain color and composition at a given time.
 
 ## Technologies used:
