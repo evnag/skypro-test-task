@@ -13,7 +13,7 @@ The storekeeper has the ability to:
 - get a list of all incomes and outcomes on a specific date;
 - find out the total number of socks of a certain color and composition at a given time.
 
-## Technologies used:
+## Technologies used
 - Java 11
 - Spring Boot/Web
 - PostgreSQL
