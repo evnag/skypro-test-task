@@ -19,6 +19,7 @@ The storekeeper has the ability to:
 - PostgreSQL
 - Liquibase
 - Swagger
+- Docker
 
 ## How to use
 Build project with:
