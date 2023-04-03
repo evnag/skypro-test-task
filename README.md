@@ -28,5 +28,5 @@ Build project with:
 From the root of the project, run the command: 
 - docker-compose up -d
 
-The external interface of the application is presented by Swagger and is available at:
+The external interface of the application is presented by Swagger and available at:
 - http://localhost:8080/swagger-ui/index.html
