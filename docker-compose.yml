@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  app:
+    image: 'skypro-test-task:latest'
+    build:
+      context: ./
+    container_name: skypro-test-task
+    ports:
+      - "8080:8080"
+    depends_on:
+      - PostgreSQL
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/SocksDb
+      - SPRING_DATASOURCE_USERNAME=myUser
+      - SPRING_DATASOURCE_PASSWORD=myUser
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=validate
+
+  PostgreSQL:
+    image: 'postgres:13.1-alpine'
+    container_name:   SocksDb
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=myUser
+      - POSTGRES_PASSWORD=myUser
+      - POSTGRES_DB=SocksDb
